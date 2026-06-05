@@ -26,7 +26,7 @@ html, body {
 -------------------------------------------------- */
 nav {
   background-color: rgba(9, 80, 28, 0.85);
-  padding: 15px 0;
+  padding: 8px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,19 +51,19 @@ nav a:hover {
 }
 
 .taconic-logo {
-  height: 45px;
+  /* height: 42px;
   position: absolute;
   left: 20px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%); */
+  height: 36px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
-
-
-
 .taconic-logo:hover {
-  filter: drop-shadow(0 0 8px #FFD700)
-          drop-shadow(0 0 12px #FFD700);
+  filter: drop-shadow(0 0 4px #FFD700)
+          drop-shadow(0 0 6px #FFD700);
 }
 
 

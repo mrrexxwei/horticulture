@@ -147,7 +147,7 @@
         }
 
         .product-qty {
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             color: var(--muted);
             white-space: nowrap;
         }
@@ -156,7 +156,7 @@
             font-weight: 600;
             color: var(--sage-dark);
             white-space: nowrap;
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
 
         /* Total */
@@ -371,9 +371,9 @@
                 productListDisplay.innerHTML = Object.values(products).map(p => `
                     <div class="product-row">
                         <span class="product-name">${p.name}</span>
-                        <span class="product-qty">× ${p.quantity} @ $${p.price.toFixed(2)}</span>
+                        <span class="product-qty">× ${p.quantity} </span>
                         <span class="product-subtotal">$${(p.quantity * p.price).toFixed(2)}</span>
-                        <input type="hidden" name="${p.name}" value="${p.quantity} x ${p.price.toFixed(2)} = $${(p.quantity * p.price).toFixed(2)}">
+                        <input type="hidden" name="${p.name}" value=" x ${p.quantity} $${(p.quantity * p.price).toFixed(2)}">
                     </div>
                 `).join('');
 
