@@ -1,0 +1,576 @@
+/* --------------------------------------------------
+   GLOBAL STYLES
+-------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+  --accent: #0b6623;
+  --muted: #666;
+}
+
+
+html, body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Playfair Display', serif; */
+  background-image: linear-gradient(rgba(236, 232, 232, 0.4), rgba(0, 80, 20, 0.726)), url("assets/images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #1a361a;
+}
+
+/* --------------------------------------------------
+   NAVIGATION
+-------------------------------------------------- */
+nav {
+  background-color: rgba(9, 80, 28, 0.85);
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  /* position: relative; NOT sticky
+  padding-left: 120px; */
+
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.taconic-logo {
+  height: 45px;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+
+.taconic-logo:hover {
+  filter: drop-shadow(0 0 8px #FFD700)
+          drop-shadow(0 0 12px #FFD700);
+}
+
+
+/* --------------------------------------------------
+   HERO BANNER
+-------------------------------------------------- */
+.hero-banner {
+  height: 25vh;
+  padding: 40px 20px;
+  background: rgba(0, 50, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 2.4rem;
+  color: #FFD700;
+  text-shadow: 2px 2px 6px black;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #f4f4f4;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: rgba(7, 87, 28, 0.85);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 15px;
+  border: 2px solid #a78e06;
+  transition: 0.3s;
+}
+
+.hero-button:hover {
+  background-color: rgba(16, 119, 42, 0.85);
+  border-color: #e0c423;
+}
+
+/* --------------------------------------------------
+   TEXT STYLES
+-------------------------------------------------- */
+.about-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.about-image {
+  max-width: 250px;
+  width: 100%;
+  flex-shrink: 0;
+  margin: auto 0;
+  border-radius: 5%;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.body-text {
+  text-align: left;
+  font-size: 1.05rem;
+  margin: 0 auto;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.about-text {
+  text-align: left;
+  font-size: 1.2rem;
+  margin: 10px auto;
+  max-width: 750px;
+  line-height: 1.8;
+}
+
+.note-text {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.about-list {
+    font-size: 1.1rem;
+    line-height: 2;
+}
+
+p {
+  line-height: 1.5;
+}
+
+li {
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+/* --------------------------------------------------
+   SECTIONS & CARDS
+-------------------------------------------------- */
+.section {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  padding: 20px 20px;
+  margin: 30px auto;
+  max-width: 1100px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+
+/* --------------------------------------------------
+   TEACHER GRID
+-------------------------------------------------- */
+.teacher-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.teacher-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.teacher-content {
+  flex: 1;
+  max-width: 700px;
+}
+
+.teacher-image {
+  max-width: 120px;
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* --------------------------------------------------
+   FORMS
+-------------------------------------------------- */
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: rgba(11, 102, 35, 0.85);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: rgba(9, 77, 26, 0.85);
+}
+
+/* --------------------------------------------------
+   GOLD GLOW EFFECT
+-------------------------------------------------- */
+.glow-gold {
+  color: #FFD700;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.7),
+               0 0 13px rgba(255, 215, 0, 0.5),
+               0 0 16px rgba(255, 215, 0, 0.3);
+  transition: 0.3s ease;
+}
+
+/* .glow-gold:hover {
+  text-shadow: 0 0 12px rgba(255, 215, 0, 1),
+               0 0 16px rgba(255, 215, 0, 0.8),
+               0 0 20px rgba(255, 215, 0, 0.6);
+} */
+
+/* --------------------------------------------------
+   PLANT GRID
+-------------------------------------------------- */
+
+/* .plant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+  margin: 25px auto;
+} */
+
+.plant-card {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  transition: 0.3s ease;
+}
+
+.plant-card img {
+  width: 80%;          /* shrink the image */
+  height: 50%;          /* shrink the image */
+  max-width: 220px;    /* cap the size */
+  margin: 0 auto 10px; /* center the image */
+  display: block;
+  border-radius: 10px;
+}
+
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 900px;   /* keeps the grid from stretching across the whole page */
+  margin: 25px auto;
+}
+
+
+.plant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.7),
+              0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+/* --------------------------------------------------
+   SEASONAL SALES PRODUCT GRID
+-------------------------------------------------- */
+.seasonal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.seasonal-item {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  border: 2px solid rgba(255, 215, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+.seasonal-item img {
+  /* width: 100%; */
+  border-radius: 10px;
+  /* margin-bottom: 10px; */
+
+  width: 80%;          /* shrink the image */
+  height: 80%;          /* shrink the image */
+  /* max-width: 220px;    cap the size */
+  /*margin: 0 auto 10px;  center the image */
+  /* display: block; */
+}
+
+.seasonal-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.7),
+              0 0 20px rgba(255, 215, 0, 0.5);
+  border-color: #FFD700;
+}
+
+/* --------------------------------------------------
+   PAYMENT BOXES
+-------------------------------------------------- */
+.payment-box {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  backdrop-filter: blur(4px);
+  border: 2px solid rgba(255, 215, 0, 0.4);
+}
+
+.venmo-qr {
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 0 12px rgba(0,0,0,0.25);
+}
+
+.venmo-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3D95CE;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 2px solid #FFD700;
+  transition: 0.3s;
+}
+
+.venmo-button:hover {
+  background-color: #2f7aa8;
+  border-color: white;
+}
+
+.coming-soon {
+  background: rgba(255, 215, 0, 0.15);
+  border: 2px dashed #FFD700;
+  text-align: center;
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(232, 245, 233, 0.6);
+  margin-top: 40px;
+  color: #4b6b4b;
+  font-size: 0.9rem;
+}
+
+/* --------------------------------------------------
+   RESPONSIVE
+-------------------------------------------------- */
+@media (max-width: 900px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-banner {
+    height: auto;
+    padding: 60px 20px;
+  }
+}
+
+/* ===================== Career Cards ===================== */
+.career-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:12px}
+.career-card{
+  background:linear-gradient(180deg, rgba(245,255,245,0.6), rgba(240,250,240,0.4));
+  padding:18px;
+  border-radius:12px;
+  border:1px solid rgba(212,175,55,0.06);
+  text-align:left
+}
+.career-card h3{margin:0 0 6px;font-size:16px}
+.career-role{font-size:18px;font-weight:800;margin-top:6px}
+.career-sub{color:#949494;font-size:18px;font-weight:800;margin-top:6px}
+.career-salary{color:var(--accent);font-weight:900;margin-top:8px}
+.career-note{color:var(--muted);font-size:13px;margin-top:8px;line-height: 1.3;}
+
+h4 {
+  margin: 0;
+  /* font-size: 18px; */
+}
+
+.teacher-info {
+  margin: 8px 0;
+}
+
+.info-card {
+  /* background: rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  text-align: left;
+  backdrop-filter: blur(4px);
+  max-width: 900px; 
+  padding: 15px;*/
+  margin: 25px 100px;
+}
+
+/* --------------------------------------------------
+   FFA SECTION
+-------------------------------------------------- */
+.ffa-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.ffa-content {
+  flex: 1;
+}
+
+.ffa-image {
+  max-width: 200px;
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 10px;
+  margin: 8% 0 3% 0;
+}
+
+#splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+#splash.fade-out {
+    opacity: 0;
+}
+
+#splash img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#close-btn {
+    /* position: absolute; */
+    position: relative;
+    bottom: 20px;
+    right: 20px;
+
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+#close-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* ==================================================
+   CONSISTENCY UTILITIES
+================================================== */
+.side-image-layout{
+  display:flex;
+  gap:25px;
+  align-items:flex-start;
+}
+
+.content-card{
+  background:rgba(255,255,255,0.35);
+  border-radius:12px;
+  padding:15px;
+  text-align:center;
+  backdrop-filter:blur(4px);
+  transition:.3s ease;
+}
+
+.content-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 12px rgba(255,215,0,.7),
+             0 0 20px rgba(255,215,0,.5);
+}
+
+.btn{
+  display:inline-block;
+  padding:10px 20px;
+  border-radius:8px;
+  font-weight:bold;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.teacher-section{padding:10px 20px;}
+.transparent-card{background:transparent;padding:0;}
+.teacher-card-compact{padding:0 5%;}
+
+/* unify card styles */
+.plant-card,
+.seasonal-item{
+  background:rgba(255,255,255,0.35);
+  border-radius:12px;
+  padding:15px;
+  text-align:center;
+  backdrop-filter:blur(4px);
+  transition:.3s ease;
+}
+
+.about-container,
+.ffa-container{
+  display:flex;
+  gap:25px;
+  align-items:flex-start;
+}
